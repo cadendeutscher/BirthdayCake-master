@@ -48,11 +48,8 @@
 
         <Switch
             android:id="@+id/switch1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:maxHeight="40dip"
-            android:maxLength="40"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
             android:text="Frosting" />
 
         <Button
