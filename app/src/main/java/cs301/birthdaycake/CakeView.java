@@ -93,6 +93,13 @@ public class CakeView extends SurfaceView {
 
     }
 
+    public void drawLoc(Canvas c){
+        Paint textp = new Paint();
+        textp.setColor(0xffff0000);
+        textp.setTextSize(200f);
+        c.drawText( "x: " + cakeInfo.tx + " " +"y: " + cakeInfo.ty, 400f,400f,textp);
+    }
+
     /**
      * onDraw is like "paint" in a regular Java program.  While a Canvas is
      * conceptually similar to a Graphics in javax.swing, the implementation has
@@ -145,6 +152,9 @@ public class CakeView extends SurfaceView {
                 }
             }
 
+        }
+        if(cakeInfo.touch) {
+            drawLoc(canvas);
         }
     }//onDraw
 

@@ -48,7 +48,12 @@ public class cakeController implements CompoundButton.OnCheckedChangeListener, V
     }
 
     public boolean onTouch(View view, MotionEvent motionEvent) {
-
+        if(motionEvent.getAction() == 0){
+            model.ty = motionEvent.getY();
+            model.tx = motionEvent.getX();
+            model.touch = true;
+            myCakeView.invalidate();
+        }
         return true;
     }
 }
