@@ -35,7 +35,9 @@ public class CakeView extends SurfaceView {
     public static final float wickWidth = 6.0f;
     public static final float outerFlameRadius = 30.0f;
     public static final float innerFlameRadius = 15.0f;
+
     private cakeModel cakeInfo;
+
 
 
     /**
@@ -65,6 +67,25 @@ public class CakeView extends SurfaceView {
         setBackgroundColor(Color.WHITE);  //better than black default
         //Initialize cake model object
        cakeInfo = new cakeModel();
+    }
+
+    //public CakeModel getCakeModel(){
+    //    return cakeInfo;
+    //}
+
+    ///LAB#3 checkpoint#2
+    public void drawBalloon(Canvas canvas){
+
+        Paint paintBalloon = new Paint();
+        paintBalloon.setColor(0xff0000ff);
+        Paint stringColor = new Paint();
+        stringColor.setColor(0xff000000);
+
+        canvas.drawOval(cakeInfo.bx-25f, cakeInfo.by-50f,cakeInfo.bx+25f, cakeInfo.by+50f, paintBalloon);
+
+        canvas.drawLine(cakeInfo.bx,cakeInfo.by+50f, cakeInfo.bx, cakeInfo.by+150f, stringColor);
+
+
     }
 
     /**
@@ -145,6 +166,12 @@ public class CakeView extends SurfaceView {
                 }
             }
 
+        }
+
+
+        //Draw ballons coordinate and shapes here
+        if(cakeInfo.isBalloon) {
+            drawBalloon(canvas);
         }
     }//onDraw
 

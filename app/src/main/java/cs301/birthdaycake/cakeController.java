@@ -46,9 +46,20 @@ public class cakeController implements CompoundButton.OnCheckedChangeListener, V
     public void onStopTrackingTouch(SeekBar seekBar) {
 
     }
-
+    /////
     public boolean onTouch(View view, MotionEvent motionEvent) {
-
+        //
+        //cm.SetIsCandle()
+        if (motionEvent.getAction() == 0){
+            model.by = motionEvent.getY();
+            model.bx = motionEvent.getX();
+            model.isBalloon = true;
+            myCakeView.invalidate();
+        }
+        //myCakeView.invalidate();
         return true;
     }
+
+
+
 }
