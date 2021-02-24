@@ -3,6 +3,7 @@ package cs301.birthdaycake;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         drawCandles.setOnCheckedChangeListener(theController);
         SeekBar mySeekBar = findViewById(R.id.seekBar3);
         mySeekBar.setOnSeekBarChangeListener(theController);
+        SurfaceView cakev = findViewById(R.id.cakeview);
+        cakev.setOnTouchListener(theController);
     }
     public void goodbye(View button) {
         System.out.println("Goodbye");

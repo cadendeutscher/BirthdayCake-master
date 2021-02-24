@@ -5,7 +5,9 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.SurfaceView;
+import android.view.View;
 
 public class CakeView extends SurfaceView {
 
@@ -150,6 +152,7 @@ public class CakeView extends SurfaceView {
     public cakeModel getCakeModel(){
         return cakeInfo;
     }
+
 
 }//class CakeView
 
